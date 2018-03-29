@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="A fun game for kids to test their memory" name="description">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>
+        Cars 3 Memory game
+    </title>
+
+    <!--Adding a favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/cars.png" />
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- game elements styles -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- global styles -->
+    <link href="css/Animations-Transitions.css" rel="stylesheet">
+    <!-- layout styles -->
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+
+<body onload="startGame()">
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <!-- start main -->
+
+    <!--Add audio at the beginning of the game -->
+    <audio id="my_audio" src="audio/engine.mp3"></audio>
+
+    <main>
+        <!-- starting section of Trophies-->
+
+        <section class="score" id="score">
+            <!-- start trophies -->
+
+            <ul class="score_trophy">
+
+                <li class="trophy_icon trophy_icon-small">
+                    <img src="img/bronze.png" id="trophy-one" alt="bronze trophy">
+                </li>
+
+                <li class="trophy_icon trophy_icon-big">
+                    <img src="img/gold_trophy.png" id="trophy-two" alt="gold trophy">
+
+                </li>
+
+                <li class="trophy_icon trophy_icon-small">
+                    <img src="img/silver.png" id="trophy-three" alt="silver trophy">
+                </li>
+            </ul>
+            <!-- ending section of trophies -->
+
+            <!-- Counting total moves -->
+            <div class="total_moves">
+                Total moves made <span id="move"></span>
+            </div>
+            <!-- end of total moves -->
+
+            <!-- start timer -->
+            <div class="score_timer">
+                <span class="min" id="min">00</span> : <span class="sec" id="sec">00</span>
+            </div>
+            <!-- end timer -->
+            <!-- start reset -->
+
+            <ul class="score_reset" onclick="reset(event)">
+                <li>
+                    <i class="fas fa-redo"></i>
+                </li>
+            </ul>
+            <!-- end reset -->
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+
+        <section class="game" id="game">
+            <!-- start game deck -->
+
+            <ul id="card-deck">
+            </ul>
+            <!-- end game deck -->
+        </section>
+        <!-- end section -->
+
+        <!-- it will show when the game ends -->
+        <div class="modal modal__end" id="end-game">
+
+            <!-- start header -->
+
+            <header class="modal_header">
+                <!-- result text -->
+
+                <h1 id="result-text">
+                    </h1>
+                <!-- Trophies at the end of the game-->
+
+                <ul class="score_trophy">
+
+                    <li class="trophy_icon trophy_icon-small icon__one">
+                        <img src="img/bronze.png" class="trophy_bronze_end" id="trophy-three-end" alt="bronze trophy">
+                    </li>
+
+                    <li class="trophy_icon trophy_icon-big icon__two">
+                        <img src="img/gold_trophy.png" class="trophy_gold_end" id="trophy-one-end" alt="gold trophy">
+                    </li>
+
+                    <li class="trophy_icon trophy_icon-small icon__three">
+                        <img src="img/silver.png" class="trophy_silver_end" id="trophy-two-end" alt="silver trophy">
+                    </li>
+                </ul>
+                <!-- end of the trophies -->
+            </header>
+            <!-- end header -->
+            <!-- start article -->
+
+            <article>
+                <!-- score -->
+
+                <h1 class="end_score">
+                        Your score is <span id="score-results"></span>
+                    </h1>
+                <!-- highscore -->
+
+                <h3 class="end_highscore">
+                        Highscore <span id="highscore"></span>
+                    </h3>
+                <!-- subtext -->
+
+                <h3 class="end_subtext">
+                        Hi, You finished in <span id="min-end"></span> <span id="sec-end"></span> and took <span id="moves-end"></span> moves.
+                    </h3>
+                <!-- end subtext -->
+            </article>
+            <!-- end article -->
+            <!-- start footer -->
+
+            <footer class="modal_footer">
+                <h3>Grab the Stearing wheel if you want to play again!!</h3>
+                <img src="img/steering-wheel.png" onload="rotateAnimation()" onclick="reset()" class="wheel" id="steering-wheel" alt="yellow steering wheel">
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end modals -->
+    </main>
+    <!-- end main -->
+    <!-- scripts -->
+    <script src="js/app.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+/*Media Query 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+	/*When the game Starts*/
+  .game {
+    width: 700px;
+  }
+
+  .deck_card {
+    width: 150px;
+    height: 120px;
+  }
+
+  .score {
+    background-size: 500px 300px;
+  }
+
+  .trophy_icon-small img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .trophy_icon-big img {
+    width: 90px;
+    height: 90px;
+  }
+	
+	/* When the game Ends*/
+  .modal-show {
+    width: 740px;
+    background-size: 100% 100%;
+  }
+
+  img.trophy_bronze_end {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    top: 20%;
+    left: 250px;
+  }
+
+  img.trophy_gold_end {
+    width: 100px;
+    height: 100px;
+  }
+
+  img.trophy_silver_end {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    top: 20%;
+    right: 240px;
+  }
+}
+
+/*Media Query 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+	
+	/*When the game Starts*/
+  .game {
+    width: 420px;
+  }
+
+  .deck_card {
+    width: 90px;
+    height: 90px;
+  }
+
+  .score {
+    background-size: 450px 250px;
+  }
+
+  .trophy_icon-small img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .trophy_icon-big img {
+    width: 80px;
+    height: 80px;
+  }
+	
+	/* When the game Ends*/
+  .modal-show {
+    width: 450px;
+    background-size: 100% 100%;
+  }
+
+  .modal_header h1 {
+    font-size: 1.7em;
+  }
+
+  img.trophy_bronze_end {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    top: 20%;
+    left: 150px;
+  }
+
+  img.trophy_gold_end {
+    width: 100px;
+    height: 100px;
+  }
+
+  img.trophy_silver_end {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    top: 20%;
+    right: 88%;
+  }
+}
+
+/*Media Query 320px to 480px*/
+@media (min-width: 320px) and (max-width: 480px) {
+	
+	/*When the game Starts*/
+  .game {
+    width: 300px;
+  }
+
+  .deck_card {
+    width: 60px;
+    height: 60px;
+  }
+
+  .score_timer, .total_moves {
+    font-size: 14px;
+  }
+
+  .trophy_icon-small img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .trophy_icon-big img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .score {
+    background-size: 400px 200px;
+  }
+	
+	/* When the game Ends*/
+  .modal-show {
+    width: 300px;
+    background-size: 100% 100%;
+  }
+
+  .modal_header h1 {
+    font-size: 1.3em;
+  }
+
+  .modal_content {
+    font-size: 0.9em;
+  }
+
+  img.trophy_bronze_end {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    top: 20%;
+    left: 73px;
+  }
+
+  img.trophy_gold_end {
+    width: 100px;
+    height: 100px;
+  }
+
+  img.trophy_silver_end {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    top: 20%;
+    right: 40%;
+  }
+}

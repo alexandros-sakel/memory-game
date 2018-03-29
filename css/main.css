@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: 'roboto', serif;
+  font-weight: 400;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: auto;
+}
+
+/* modal styles */
+.modal {
+  width: 0;
+  height: 0;
+  margin: auto;
+  padding: 0.5em;
+  border: 2px solid rgb(28, 28, 78);
+  border-radius: 5px;
+  text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  box-shadow: 0 45px 56px rgba(0, 0, 0, 0.88);
+  transition: 0.4s cubic-bezier(0.42, 0, 0.6, 1);
+  background: url(../img/cars_the_movie.jpg) 0 no-repeat;
+}
+
+.modal-show {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal_header h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.modal_footer h3 {
+  color: #fff;
+  font-size: 1.6em;
+}
+
+.wheel {
+  width: 80px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.end_score,
+.end_highscore,
+.end_subtext {
+  color: #fff;
+}
+
+/* game section styles */
+.game {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: auto;
+  padding: 0.5em;
+  border: 2px solid rgb(28, 28, 78);
+  border-radius: 5px;
+  background: url(../img/road.jpg);
+  text-align: center;
+  transform: scale(0);
+  box-shadow: 0 45px 56px rgba(0, 0, 0, 0.88);
+  position: relative;
+}
+
+.game-show {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.game-show ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transform: scale(1);
+}
+
+.deck_card {
+  width: 180px;
+  height: 130px;
+  background-color: rgba(28, 28, 78, 0.9);
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  border: 2px solid rgb(28, 28, 78);
+  border-radius: 5px;
+}
+
+.deck_card-open {
+  transform: rotateY(720deg);
+}
+
+.deck_card div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+}
+
+.deck_card-open div {
+  opacity: 1;
+}
+
+/* score board styles */
+.score {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3.2em 3em;
+  grid-template-areas: '. trophies reset'
+    'time . moves';
+  color: rgb(66, 178, 224);
+  margin: 15px auto 20px auto;
+  padding: 0.5em;
+  border: 2px solid rgb(28, 28, 78);
+  border-radius: 5px;
+  background: url(../img/racing.png) 0 no-repeat;
+  text-align: center;
+  transform: scale(0);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.88);
+}
+
+.score-show {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.score_timer {
+  grid-area: time;
+  font-size: 20px;
+}
+
+.total_moves {
+  grid-area: moves;
+  font-size: 20px;
+}
+
+.score_reset {
+  grid-area: reset;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.score_reset li {
+  align-self: center;
+  cursor: pointer;
+}
+
+.score_trophy {
+  grid-area: trophies;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Styling the trophies at the start of the game*/
+.trophy_icon-small img {
+  width: 90px;
+  height: 90px;
+}
+
+.trophy_icon-big img {
+  width: 105px;
+  height: 105px;
+}
+
+/*Styling the trophies at the end of the game*/
+.trophy_bronze_end {
+  width: 150px;
+  height: 120px;
+  position: relative;
+  top: 20%;
+  left: 350px;
+}
+
+.trophy_gold_end {
+  width: 100px;
+  height: 100px;
+}
+
+.trophy_silver_end {
+  width: 150px;
+  height: 120px;
+  position: relative;
+  top: 20%;
+  right: 350px;
+}
+
+.remove-trophy {
+  display: none;
+}
