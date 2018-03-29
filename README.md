@@ -13,5 +13,5 @@ The project was build with html css and javascript.
 
 The objective of this game is to:
 
-1 Match all 16 cards in pairs of 2.  
-	..* Each time a player clicks on a card he has to find it's pair. If the 2 cards dosen't match the criteria the player must choose again.
+1. Match all 16 cards in pairs of 2.  
+  * Each time a player clicks on a card he has to find it's pair. If the 2 cards dosen't match the criteria the player must choose again.
