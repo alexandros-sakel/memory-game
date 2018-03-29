@@ -24,8 +24,8 @@ Also at the end there is a steering wheel, if the player want's to play again he
 
 The objective of this game is to:
 
-1) Match all 16 cards in pairs of 2.
-  *The timer starts when the player chooses a card.
+1) Match all 16 cards in pairs of 2.        
+    * The timer starts when the player chooses a card.   
   
 2) The player must click on 2 cards. 
 	* If the player finds 2 similar cards then the cards stay face up!
