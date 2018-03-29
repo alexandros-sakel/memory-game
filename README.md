@@ -12,7 +12,7 @@ The project was build with html css and javascript.
 
 When the game starts you are going to hear an engine sound whith a little shaking effect.
 As the game progresses and the player has made several moves! then the first trophy (Gold) is going to dissapear, the same is going to happen with the (silver).  
-At the end of the game the player is going to be informed about he's progression. 
+At the end of the game the player is going to be informed about he's progression.   
 	* Which trophy did he get.  
 	* What was he's score.  
 	* How many minutes, seconds and moves did.  
