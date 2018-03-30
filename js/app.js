@@ -113,11 +113,17 @@ function shuffle(array) {
  return array;
 }
 
+//Adding audio when the game starts
+var audio;
+function initAudioPlayer(){
+  audio = new Audio();
+  audio.src = "audio/engine.mp3";
+  audio.play();
+}
+window.addEventListener("load", initAudioPlayer);
+
 //Starts the game
 function startGame() {
-
- //Adding sound at the begging of the game
- document.getElementById("my_audio").play();
 
  // Gives it a little time before the game board and score board are shown
  setTimeout(function() {
@@ -372,7 +378,10 @@ function endGame(moves) {
 
 //When the streering wheel is pressed the trophies are set back to basic values
 function reset() {
-	
+
+ //When the game is reset the sound fires again 	
+ initAudioPlayer();
+ 
  //We are resseting the trophies at the start of the game 
  trophyThree.classList.remove('remove-trophy');
  trophyTwo.classList.remove('remove-trophy');
