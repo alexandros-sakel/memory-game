@@ -436,16 +436,16 @@ function countTrophy(moves) {
  }
 }
 
-//Making the image Steering Whell rotate at the end of the game 
-var looper;
-var degrees = 0;
-var speed = 10;
-function rotateAnimation(el, speed) {
- var elem = document.getElementById("steering-wheel");
- elem.style.transform = "rotate(" + degrees + "deg)";
- looper = setTimeout('rotateAnimation(\'' + elem + '\',' + speed + ')', speed);
- degrees++;
- if (degrees > 359) {
-  degrees = 1;
- }
-}
+//Adds animation to the steeering-whell at the end of the game
+var wheel = document.getElementById('steering-wheel');
+wheel.animate([
+    {
+        transform: 'rotate(0)'
+    },
+    {
+        transform: 'rotate(359deg)'
+    }
+], {
+    duration: 1000,
+    iterations: Infinity
+});
